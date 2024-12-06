@@ -18,14 +18,14 @@
         <!-- Game board -->
         <div id="game-board">
             
-            <div class="trash" data-id="1"></div>
-            <div class="trash" data-id="2"></div>
-            <div class="trash" data-id="3"></div>
-            <div class="trash" data-id="4"></div>
-            <div class="trash" data-id="5"></div>
-            <div class="trash" data-id="6"></div>
-            <div class="trash" data-id="7"></div>
-            <div class="trash" data-id="8"></div>
+            <div class="trash" data-id="1" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="2" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="3" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="4" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="5" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="6" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="7" onclick="explodeTrash(this)"></div>
+            <div class="trash" data-id="8" onclick="explodeTrash(this)"></div>
         </div>
         
         <!-- Kraken Animation -->
@@ -37,5 +37,7 @@
     </div>
 
     <script src="game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </body>
 </html>

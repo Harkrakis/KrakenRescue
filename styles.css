@@ -54,8 +54,41 @@ h1 {
     cursor: pointer;
     position: absolute;
     z-index: 10; /* Ensure trash piles are clickable */
+    transition: transform 0.2s;
 
 }
+
+.trash:hover {
+    transform: scale(1.2); /* A slight zoom effect on hover */
+}
+
+/* .fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+} */
+ 
+.shake {
+    animation: krakenShake 0.3s ease-in-out;
+}
+
+@keyframes krakenShake {
+    0% { transform: translate(-50px, 0); }
+    25% { transform: translate(-52px, 5px); }
+    50% { transform: translate(-48px, 10px); }
+    75% { transform: translate(-50px, 5px); }
+    100% { transform: translate(-50px, 0); }
+}
+
 
 .trash[data-id="1"] {
     top: 50px;
