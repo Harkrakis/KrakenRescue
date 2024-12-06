@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#boat-img {
+    position: absolute;
+    top: 10px;  /* Position the boat at the top of the screen */
+    left: 40%;  /* Center the boat horizontally */
+    transform: translateX(-50%);  /* Adjust horizontal position */
+    z-index: 20;  /* Make sure the boat appears above the Kraken and trash */
+    width: 10%;
+
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('background.png'); /* Add background image */
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    width: 600px;
+    height: 600px;
+
+}
+
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+#game-board {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    z-index: 1;
+    transform: translateY(000px);
+
+}
+
+
+
+.trash {
+    width: 50px;
+    height: 50px;
+    background-image: url('Dechet.png'); /* Use Dechet image for trash squares */
+    background-size: cover; /* Ensures the trash image covers the square */
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10; /* Ensure trash piles are clickable */
+
+}
+
+.trash[data-id="1"] {
+    top: 50px;
+    left: 150px;
+}
+
+.trash[data-id="2"] {
+    top: 50px;
+    right: 150px;
+}
+
+.trash[data-id="3"] {
+    top: 80px;
+    left: 70px;
+}
+
+.trash[data-id="4"] {
+    top: 80px;
+    right: 70px;
+}
+
+.trash[data-id="5"] {
+    top: 250px;
+    left: 50px;
+}
+
+.trash[data-id="6"] {
+    top: 250px;
+    right: 50px;
+}
+
+.trash[data-id="7"] {
+    bottom: -50px;
+    left: 130px;
+}
+
+.trash[data-id="8"] {
+    bottom: -50px;
+    right: 130px;
+}
+
+#kraken {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transform: translateY(-450px);
+}
+
+#kraken-img {
+    width: 100%;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: -1;
+}
+
+#message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #e74c3c;
+}
