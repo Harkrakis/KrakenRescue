@@ -95,7 +95,9 @@ function explodeTrash(trashElement) {
         delay: 0.5, // Delay to allow oscillation to finish
         ease: "power2.in",
         onComplete: () => trashElement.remove(),
+        
     });
+    checkWin(); // Check if all trash is removed
 }
 
 // Helper function to generate random colors
@@ -106,4 +108,33 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+// Check if all trash is removed
+function checkWin() {
+    const remainingTrash = document.querySelectorAll('.trash');
+    console.log(remainingTrash)
+    if (remainingTrash.length === 1) {
+        displayWinScreen();
+        console.log("Winning son");
+
+    }
+}
+
+// Display the win screen
+function displayWinScreen() {
+    const trashContainer = document.getElementById('game-board');
+    const kraken = document.getElementById('kraken');
+    const message = document.getElementById('message');
+    const boat = document.getElementById('boat');
+    const winScreen = document.getElementById('win-screen');
+
+    // Hide trash container and kraken
+    trashContainer.style.display = 'none';
+    kraken.style.display = 'none';
+    boat.style.display = 'none';
+    message.style.display = 'none';
+
+    // Show win screen
+    winScreen.classList.remove('hidden');
 }
